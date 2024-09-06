@@ -1,0 +1,42 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+
+
+create database equipement;
+
+
+use equipement;
+
+ create table equipement (nom varchar(20), bonus_vie int, bonus_attaque int, bonus_defense int, bonus_vitesse int);
+
+
+ insert into equipement (nom, bonus_vie, bonus_attaque, bonus_defense, bonus_vitesse) values ('gants', null, 20, null, null);
+
+
+insert into equipement (nom, bonus_vie, bonus_attaque, bonus_defense, bonus_vitesse) values ('bottes', null, null, null, 20);
+
+
+insert into equipement (nom, bonus_vie, bonus_attaque, bonus_defense, bonus_vitesse) values ('gilet', null, null, 20, null);
+
+
+insert into equipement (nom, bonus_vie, bonus_attaque, bonus_defense, bonus_vitesse) values ('heaume', 20, null, null, null);
+
+
+select * from equipement;
+
++--------+-----------+---------------+---------------+---------------+
+| nom    | bonus_vie | bonus_attaque | bonus_defense | bonus_vitesse |
++--------+-----------+---------------+---------------+---------------+
+| gants  |      NULL |            20 |          NULL |          NULL |
+| bottes |      NULL |          NULL |          NULL |            20 |
+| gilet  |      NULL |          NULL |            20 |          NULL |
+| heaume |        20 |          NULL |          NULL |          NULL |
++--------+-----------+---------------+---------------+---------------+
+
+
